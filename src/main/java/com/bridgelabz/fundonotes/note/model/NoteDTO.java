@@ -1,7 +1,6 @@
 package com.bridgelabz.fundonotes.note.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -22,11 +21,11 @@ public class NoteDTO implements Serializable {
 	String title;
 	String description;
 	@ApiModelProperty(hidden = true)
-	Date createdAt;
+	String createdAt;
 	@ApiModelProperty(hidden = true)
 	String userEmail;
 	@ApiModelProperty(hidden = true)
-	Date lastModifiedAt;
+	String lastModifiedAt;
 	String label;
 	String testColor;
 
@@ -58,11 +57,11 @@ public class NoteDTO implements Serializable {
 		this.description = description;
 	}
 
-	public Date getCreatedAt() {
+	public String getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
 	}
 
@@ -74,11 +73,11 @@ public class NoteDTO implements Serializable {
 		this.userEmail = userEmail;
 	}
 
-	public Date getLastModifiedAt() {
+	public String getLastModifiedAt() {
 		return lastModifiedAt;
 	}
 
-	public void setLastModifiedAt(Date lastModifiedAt) {
+	public void setLastModifiedAt(String lastModifiedAt) {
 		this.lastModifiedAt = lastModifiedAt;
 	}
 
