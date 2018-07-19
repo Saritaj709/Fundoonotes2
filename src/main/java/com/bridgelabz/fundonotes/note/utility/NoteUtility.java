@@ -7,7 +7,7 @@ public class NoteUtility {
 	
 	private final static String EMAIL = "^\\w+@\\w+\\..{2,3}(.{2,3})?$";
 	private final static String DATE="";
-	
+	/*
 	public void validateNote(NoteDTO note) throws NoteException {
 		if(!note.getCreationDate().matches(DATE)) {
 			throw new NoteException("invalid creation date format");
@@ -24,6 +24,6 @@ public class NoteUtility {
 		if(!note.getLastModifiedDate().matches(DATE)) {
 			throw new NoteException("invalid last modified date format");
 		}
-	}
+	}*/
 
 }  

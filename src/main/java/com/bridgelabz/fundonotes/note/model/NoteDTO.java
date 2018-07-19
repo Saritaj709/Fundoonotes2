@@ -1,6 +1,7 @@
 package com.bridgelabz.fundonotes.note.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -21,11 +22,13 @@ public class NoteDTO implements Serializable {
 	String title;
 	String description;
 	@ApiModelProperty(hidden = true)
-	String creationDate;
+	Date createdAt;
 	@ApiModelProperty(hidden = true)
 	String userEmail;
 	@ApiModelProperty(hidden = true)
-	String lastModifiedDate;
+	Date lastModifiedAt;
+	String label;
+	String testColor;
 
 	public NoteDTO() {
 		super();
@@ -55,12 +58,12 @@ public class NoteDTO implements Serializable {
 		this.description = description;
 	}
 
-	public String getCreationDate() {
-		return creationDate;
+	public Date getCreatedAt() {
+		return createdAt;
 	}
 
-	public void setCreationDate(String creationDate) {
-		this.creationDate = creationDate;
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	public String getUserEmail() {
@@ -71,22 +74,34 @@ public class NoteDTO implements Serializable {
 		this.userEmail = userEmail;
 	}
 
-	public String getLastModifiedDate() {
-		return lastModifiedDate;
+	public Date getLastModifiedAt() {
+		return lastModifiedAt;
 	}
 
-	public void setLastModifiedDate(String lastModifiedDate) {
-		this.lastModifiedDate = lastModifiedDate;
+	public void setLastModifiedAt(Date lastModifiedAt) {
+		this.lastModifiedAt = lastModifiedAt;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
+
+	public String getTestColor() {
+		return testColor;
+	}
+
+	public void setTestColor(String testColor) {
+		this.testColor = testColor;
 	}
 
 	@Override
 	public String toString() {
-		return "Notes [noteEmail=" + noteEmail + ", title=" + title + ", description=" + description + ", creationDate="
-				+ creationDate + ", userEmail=" + userEmail + ", lastModifiedDate=" + lastModifiedDate + "]";
+		return "NoteDTO [noteEmail=" + noteEmail + ", title=" + title + ", description=" + description + ", createdAt="
+				+ createdAt + ", userEmail=" + userEmail + ", lastModifiedAt=" + lastModifiedAt + ", label=" + label
+				+ ", testColor=" + testColor + "]";
 	}
-
 }
